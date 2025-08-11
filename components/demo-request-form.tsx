@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Calendar, Clock, Users, Building, CheckCircle, Loader2 } from 'lucide-react'
+import { Calendar, Clock, CheckCircle, Loader2 } from 'lucide-react'
 
 interface FormData {
   firstName: string
@@ -61,7 +61,7 @@ export default function DemoRequestForm() {
     if (!formData.company.trim()) newErrors.company = 'Company name is required'
     if (!formData.organizationType) newErrors.organizationType = 'Please select organization type'
     if (!formData.teamSize) newErrors.teamSize = 'Please select team size'
-    if (!formData.terms) newErrors.terms = 'You must accept the terms and conditions'
+    // if (!formData.terms) newErrors.terms = 'You must accept the terms and conditions'
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -102,8 +102,8 @@ export default function DemoRequestForm() {
           <h4 className="font-medium text-white mb-2">What happens next?</h4>
           <ul className="text-sm text-slate-300 space-y-1">
             <li>• Our AI specialist will review your requirements</li>
-            <li>• We'll prepare a customized demo based on your use case</li>
-            <li>• You'll receive a calendar invite for your preferred time</li>
+            <li>• We&apos;ll prepare a customized demo based on your use case</li>
+            <li>• You&apos;ll receive a calendar invite for your preferred time</li>
             <li>• Get ready to see AI transform your workflows!</li>
           </ul>
         </div>
@@ -304,7 +304,7 @@ export default function DemoRequestForm() {
             className="border-slate-600 data-[state=checked]:bg-blue-600 mt-0.5"
           />
           <Label htmlFor="newsletter" className="text-sm text-slate-300 leading-relaxed">
-            I'd like to receive updates about Aryabhat.ai products, features, and industry insights.
+            I&apos;d like to receive updates about Aryabhat.ai products, features, and industry insights.
           </Label>
         </div>
         <div className="flex items-start space-x-3">

@@ -3,9 +3,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Infinity, ArrowRight, Users, Building2, Globe, Zap, Mail, MessageCircle } from "lucide-react"
-import Image from 'next/image';
-import { useState, useEffect, useRef } from "react"
+import { Users, Building2, Globe, Zap, Mail, MessageCircle } from "lucide-react"
+import { useState, useEffect } from "react"
 import notebookGif from './../storage/notebook_light.gif';
 // import adminGif from './../storage/admin_dark.gif';
 import adminGif from './../storage/admin_light.gif';
@@ -330,7 +329,7 @@ export default function HomePage() {
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Advanced Language Technologies</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Powered by Bhashini, India's National Language Translation Mission, we offer cutting-edge language
+              Powered by Bhashini, India&apos;s National Language Translation Mission, we offer cutting-edge language
               processing capabilities for seamless multilingual communication.
             </p>
           </div>
@@ -527,7 +526,7 @@ export default function HomePage() {
                 </h2>
                 <p className="text-xl text-slate-300 leading-relaxed">
                   Contact Aryabhat.ai today! Take the first step towards intelligent automation. Connect with our AI
-                  specialists now and let's embark on a journey of digital transformation together.
+                  specialists now and let&apos;s embark on a journey of digital transformation together.
                 </p>
               </div>
 
@@ -554,9 +553,9 @@ export default function HomePage() {
               {/* Testimonial */}
               <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
                 <p className="text-slate-300 italic mb-4">
-                  "At Aryabhat.ai, we are passionate about helping organizations like yours thrive in the AI age.
-                  Whether you're seeking cutting-edge automation solutions, intelligent data insights, or expert AI
-                  consulting, our team of professionals is here to guide you every step of the way."
+                  &quot;At Aryabhat.ai, we are passionate about helping organizations like yours thrive in the AI age.
+                  Whether you&apos;re seeking cutting-edge automation solutions, intelligent data insights, or expert AI
+                  consulting, our team of professionals is here to guide you every step of the way.&quot;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
