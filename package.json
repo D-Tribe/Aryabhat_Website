@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "npm run build && gh-pages -d out",
+    "deploy": "npm run build && gh-pages -d out --nojekyll --cname https://d-tribe.github.io",
     "start": "next start",
     "lint": "next lint"
   },
