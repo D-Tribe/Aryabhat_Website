@@ -7,6 +7,7 @@ import { Users, Building2, Globe, Zap, Mail, MessageCircle } from "lucide-react"
 import { useState, useEffect } from "react"
 import notebookGif from './../storage/notebook_light.gif';
 // import adminGif from './../storage/admin_dark.gif';
+import logo from '../app/logo.png';
 import adminGif from './../storage/admin_light.gif';
 
 export default function HomePage() {
@@ -31,7 +32,7 @@ export default function HomePage() {
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                  <img
-                      src="/favicon.ico"
+                      src={logo.src}
                       alt="App Favicon"
                       className="h-6 w-8 group-hover:text-blue-400 transition-colors duration-300"
                       style={{ filter: 'invert(1)' }}/>
@@ -560,7 +561,7 @@ export default function HomePage() {
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
                      <img
-                      src="/favicon.ico"
+                      src={logo.src}
                       alt="App Favicon"
                       className="h-5 w-5"
                       style={{ filter: 'invert(1)' }} />
