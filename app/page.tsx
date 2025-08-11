@@ -657,19 +657,19 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-3">
-               <div
-                className="h-6 w-6 bg-slate-400"
-                style={{
-                  maskImage: `url(${logo.src})`,
-                  WebkitMaskImage: `url(${logo.src})`,
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskSize: 'contain',
-                  WebkitMaskSize: 'contain',
-                }}
-                />
-              <span className="text-slate-400 font-medium">Aryabhat.ai</span>
-            </div>
+            <div
+              className="h-6 w-6 bg-slate-400"
+              style={{
+                maskImage: `url(${logo.src})`,
+                WebkitMaskImage: `url(${logo.src})`,
+                maskRepeat: 'no-repeat',
+                WebkitMaskRepeat: 'no-repeat',
+                maskSize: 'contain',
+                WebkitMaskSize: 'contain',
+              }}
+            />
+            <span className="text-slate-400 font-medium">Aryabhat.ai</span>
+          </div>
             <p className="text-slate-500 text-sm">Copyright © 2025 Aryabhat.ai. All rights reserved.</p>
             <div className="flex space-x-6">
               <Link
