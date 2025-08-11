@@ -582,7 +582,7 @@ export default function HomePage() {
                 <div className="flex justify-center mb-6">
                   <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                     <img
-                      src="/favicon.ico"
+                      src={logo.src}
                       alt="App Favicon"
                       className="h-10 w-10"
                       style={{ filter: 'invert(1)' }}
@@ -660,14 +660,14 @@ export default function HomePage() {
                <div
                 className="h-6 w-6 bg-slate-400"
                 style={{
-                  maskImage: 'url(/favicon.ico)',
-                  WebkitMaskImage: 'url(/favicon.ico)',
+                  maskImage: `url(${logo.src})`,
+                  WebkitMaskImage: `url(${logo.src})`,
                   maskRepeat: 'no-repeat',
                   WebkitMaskRepeat: 'no-repeat',
                   maskSize: 'contain',
-                  WebkitMaskSize: 'contain'
+                  WebkitMaskSize: 'contain',
                 }}
-              />
+                />
               <span className="text-slate-400 font-medium">Aryabhat.ai</span>
             </div>
             <p className="text-slate-500 text-sm">Copyright © 2025 Aryabhat.ai. All rights reserved.</p>
