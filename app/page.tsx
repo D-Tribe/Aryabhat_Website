@@ -480,7 +480,7 @@ export default function HomePage() {
               <div className="space-y-6 lg:order-2">
                 <div className="space-y-4">
                   <Badge className="bg-purple-600/20 text-purple-400 border-purple-600/30 px-3 py-1 text-sm">
-                    Analytics Dashboard
+                    Admin Panel
                   </Badge>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white">Admin Control Center</h3>
                   <p className="text-lg text-slate-300 leading-relaxed">
