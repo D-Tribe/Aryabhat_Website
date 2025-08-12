@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from "next/router";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -8,9 +9,10 @@ import { useState } from "react"
 import logo from '../app/logo.png';
 
 export default function HomePage() {
+  const { basePath } = useRouter();
 
-  const [notebookGifSrc] = useState('/light_notebook.webm');
-  const [adminGifSrc] = useState('/light_admin.webm');
+  const [notebookGifSrc] = useState(`${basePath}/light_notebook.webm`);
+  const [adminGifSrc] = useState(`${basePath}/light_admin.webm`);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
