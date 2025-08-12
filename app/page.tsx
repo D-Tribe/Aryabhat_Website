@@ -4,24 +4,21 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Building2, Globe, Zap, Mail, MessageCircle } from "lucide-react"
-import { useState, useEffect } from "react"
-import notebookGif from './../storage/notebook_light.gif';
-// import adminGif from './../storage/admin_dark.gif';
+import { useState } from "react"
 import logo from '../app/logo.png';
-import adminGif from './../storage/admin_light.gif';
 
 export default function HomePage() {
 
-  const [notebookGifSrc, setNotebookGifSrc] = useState(notebookGif.src);
-  const [adminGifSrc, setAdminGifSrc] = useState(adminGif.src);
+  const [notebookGifSrc] = useState('/light_notebook.webm');
+  const [adminGifSrc] = useState('/light_admin.webm');
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setNotebookGifSrc(`${notebookGif.src}?t=${new Date().getTime()}`);
-      setAdminGifSrc(`${adminGif.src}?t=${new Date().getTime()}`);
-    }, 20000); // 20900 milliseconds = 20 seconds
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setNotebookGifSrc(`/dark_notebook.webm?t=${Date.now()}`);
+  //     setAdminGifSrc(`${adminGif.src}?t=${new Date().getTime()}`);
+  //   }, 20000); // 20900 milliseconds = 20 seconds
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -450,11 +447,22 @@ export default function HomePage() {
               </div>
               <div className="relative">
                 <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-                  <img
+                  {/* <img
                     src={notebookGifSrc}
                     alt="Aryabhat.ai Notebook Interface showing AI chat functionality with organized projects and smart suggestions"
                     className="w-620 h-80 brightness-100"
-                  />
+                  /> */}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src={notebookGifSrc}
+                  className="w-[620px] h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
+                  disablePictureInPicture
+                  controlsList="nodownload nofullscreen noremoteplayback noautoplay"
+                  translate="no"/>
+
                 </div>
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl"></div>
               </div>
@@ -469,11 +477,16 @@ export default function HomePage() {
                     alt="Aryabhat.ai Admin Dashboard showing user analytics, engagement metrics, and comprehensive reporting"
                     className="w-full h-auto"
                   /> */}
-                  <img
-                    src={adminGifSrc}
-                    alt="Aryabhat.ai Admin Dashboard showing user analytics, engagement metrics, and comprehensive reporting"
-                    className="w-620 h-80 brightness-100"
-                  />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src={adminGifSrc}
+                  className="w-[620px] h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
+                  disablePictureInPicture
+                  controlsList="nodownload nofullscreen noremoteplayback noautoplay"
+                  translate="no"/>
                 </div>
                 <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl blur-xl"></div>
               </div>
