@@ -1,18 +1,19 @@
 "use client"
-import { useRouter } from "next/router";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Building2, Globe, Zap, Mail, MessageCircle } from "lucide-react"
-import { useState } from "react"
+// import { useState } from "react"
 import logo from '../app/logo.png';
 
 export default function HomePage() {
-  const { basePath } = useRouter();
 
-  const [notebookGifSrc] = useState(`${basePath}/light_notebook.webm`);
-  const [adminGifSrc] = useState(`${basePath}/light_admin.webm`);
+  // const [notebookGifSrc] = useState(notebookGif);
+  // const [adminGifSrc] = useState(adminGif);
+
+  const notebookGifSrc = "light_notebook.webm";
+  const adminGifSrc = "light_admin.webm";
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -90,7 +91,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-15">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
