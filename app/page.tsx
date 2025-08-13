@@ -461,11 +461,10 @@ export default function HomePage() {
                   muted
                   playsInline
                   src={notebookGifSrc}
-                  className="w-[620px] h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
+                  className="w-auto h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
                   disablePictureInPicture
                   controlsList="nodownload nofullscreen noremoteplayback noautoplay"
                   translate="no"/>
-
                 </div>
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl"></div>
               </div>
@@ -473,26 +472,6 @@ export default function HomePage() {
 
             {/* Admin Dashboard */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative lg:order-1">
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-                  {/* <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TgObZuc7w7RxIBJMLJZHuCv0R122QV.png"
-                    alt="Aryabhat.ai Admin Dashboard showing user analytics, engagement metrics, and comprehensive reporting"
-                    className="w-full h-auto"
-                  /> */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src={adminGifSrc}
-                  className="w-[620px] h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
-                  disablePictureInPicture
-                  controlsList="nodownload nofullscreen noremoteplayback noautoplay"
-                  translate="no"/>
-                </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl blur-xl"></div>
-              </div>
               <div className="space-y-6 lg:order-2">
                 <div className="space-y-4">
                   <Badge className="bg-purple-600/20 text-purple-400 border-purple-600/30 px-3 py-1 text-sm">
@@ -521,6 +500,26 @@ export default function HomePage() {
                     <span className="text-slate-300">Database connector integration</span>
                   </div>
                 </div>
+              </div>
+              <div className="relative lg:order-1">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+                  {/* <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TgObZuc7w7RxIBJMLJZHuCv0R122QV.png"
+                    alt="Aryabhat.ai Admin Dashboard showing user analytics, engagement metrics, and comprehensive reporting"
+                    className="w-full h-auto"
+                  /> */}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src={adminGifSrc}
+                  className="w-auto h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
+                  disablePictureInPicture
+                  controlsList="nodownload nofullscreen noremoteplayback noautoplay"
+                  translate="no"/>
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl blur-xl"></div>
               </div>
             </div>
           </div>
