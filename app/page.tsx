@@ -7,21 +7,13 @@ import { Users, Building2, Globe, Zap, Mail, MessageCircle } from "lucide-react"
 // import { useState } from "react"
 import logo from '../app/logo.png';
 
+
 export default function HomePage() {
 
   // const [notebookGifSrc] = useState(notebookGif);
   // const [adminGifSrc] = useState(adminGif);
 
-  const notebookGifSrc = "light_notebook.webm";
-  const adminGifSrc = "light_admin.webm";
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setNotebookGifSrc(`/dark_notebook.webm?t=${Date.now()}`);
-  //     setAdminGifSrc(`${adminGif.src}?t=${new Date().getTime()}`);
-  //   }, 20000); // 20900 milliseconds = 20 seconds
-  //   return () => clearInterval(interval);
-  // }, []);
+  const notebookGifSrc = "aryabhat_website.webm";
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -408,46 +400,15 @@ export default function HomePage() {
             <Badge className="bg-purple-600/20 text-purple-400 border-purple-600/30 px-4 py-2 text-sm font-medium mb-4">
               PRODUCT PREVIEW
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">See Aryabhat.ai in Action</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">See Aryabhat in Action</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get a sneak peek of our intuitive interface and powerful analytics dashboard that makes AI accessible to
-              everyone.
+              Turn hours of document search into seconds of insight—making your business faster and more productive.
             </p>
           </div>
 
           <div className="space-y-16">
             {/* AI Notebook Interface */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="space-y-4">
-                  <Badge className="bg-blue-600/20 text-blue-400 border-blue-600/30 px-3 py-1 text-sm">
-                    AI Notebook Interface
-                  </Badge>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Intuitive Chat & Knowledge Management</h3>
-                  <p className="text-lg text-slate-300 leading-relaxed">
-                    Our notebook interface makes it easy to organize conversations, access different AI models, and
-                    manage your knowledge base. Ask anything and get intelligent responses powered by advanced AI.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-slate-300">Organized project notebooks</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-slate-300">Smart suggestion cards</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-slate-300">Natural language queries</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-slate-300">Multiple AI model support</span>
-                  </div>
-                </div>
-              </div>
+            <div className="grid lg:col-span-2 gap-12 items-center">
               <div className="relative">
                 <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
                   {/* <img
@@ -455,71 +416,19 @@ export default function HomePage() {
                     alt="Aryabhat.ai Notebook Interface showing AI chat functionality with organized projects and smart suggestions"
                     className="w-620 h-80 brightness-100"
                   /> */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src={notebookGifSrc}
-                  className="w-auto h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
-                  disablePictureInPicture
-                  controlsList="nodownload nofullscreen noremoteplayback noautoplay"
-                  translate="no"/>
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    src={notebookGifSrc}
+                    className="w-full h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
+                    disablePictureInPicture
+                    controlsList="nodownload nofullscreen noremoteplayback noautoplay"
+                    translate="no"
+                  />
                 </div>
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl"></div>
-              </div>
-            </div>
-
-            {/* Admin Dashboard */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 lg:order-2">
-                <div className="space-y-4">
-                  <Badge className="bg-purple-600/20 text-purple-400 border-purple-600/30 px-3 py-1 text-sm">
-                    Admin Panel
-                  </Badge>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Admin Control Center</h3>
-                  <p className="text-lg text-slate-300 leading-relaxed">
-                    Easily manage every aspect of your platform from a centralized admin interface. Gain real-time insights, control user access, manage files and tags, configure licenses, connect storage devices, integrate databases, and fine-tune system settings — all in one place. Streamline operations, improve security, and make data-driven decisions with powerful management tools.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    <span className="text-slate-300">Real-time analytics & reporting</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    <span className="text-slate-300">User and role management</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    <span className="text-slate-300">Secure file repository</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    <span className="text-slate-300">Database connector integration</span>
-                  </div>
-                </div>
-              </div>
-              <div className="relative lg:order-1">
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-                  {/* <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TgObZuc7w7RxIBJMLJZHuCv0R122QV.png"
-                    alt="Aryabhat.ai Admin Dashboard showing user analytics, engagement metrics, and comprehensive reporting"
-                    className="w-full h-auto"
-                  /> */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src={adminGifSrc}
-                  className="w-auto h-auto brightness-100 rounded-2xl overflow-hidden shadow-2xl border border-slate-700"
-                  disablePictureInPicture
-                  controlsList="nodownload nofullscreen noremoteplayback noautoplay"
-                  translate="no"/>
-                </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl blur-xl"></div>
               </div>
             </div>
           </div>
