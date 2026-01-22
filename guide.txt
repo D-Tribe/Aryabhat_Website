@@ -1,0 +1,34 @@
+---
+
+## To Update Website - aryabhat.ai
+
+1. Check CNAME file in /out
+
+   >> aryabhat.ai
+
+2. Check next.config.ts
+
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+output: "export",
+images: { unoptimized: true },
+basePath: "",
+assetPrefix: "",
+};
+
+export default nextConfig;
+
+3. Git add, commit & deploy
+
+git add .
+git commit -m "<message>"
+git push origin main
+npm run build
+npm run deploy
+
+---
+
+## To Start From Local
+
+npm run dev
