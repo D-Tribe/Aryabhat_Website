@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import { 
   Users, 
@@ -8,14 +9,13 @@ import {
   Zap, 
   Mail, 
   MessageCircle, 
-  ArrowRight, 
   ShieldCheck,
   CheckCircle2,
   Cpu,
   Sparkles
 } from "lucide-react"
 import { motion, useScroll, useTransform, useMotionTemplate, useMotionValue, AnimatePresence } from "framer-motion"
-import { useRef, useState, useEffect } from "react"
+import { useState } from "react"
 import logo from '../app/logo.png';
 
 // --- Utility Components ---
@@ -88,7 +88,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-all duration-300">
-                 <img 
+                 <Image 
                     src={logo.src} 
                     alt="Logo" 
                     className="w-6 h-6 invert brightness-200"
@@ -317,14 +317,16 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="inline-block p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md mb-8">
-               <img
+               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hNdbQw01WSqAaqXjz1YBQZPjZiD7VT.png"
                 alt="Bhashini Logo"
                 className="h-10 w-auto opacity-90"
               />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Breaking Language Barriers</h2>
-            <p className="text-lg text-slate-400">Powered by Bhashini, India's National Language Translation Mission, we offer cutting-edge language processing capabilities.</p>
+            <p className="text-lg text-slate-400">
+              Powered by Bhashini, India&apos;s National Language Translation Mission, we offer cutting-edge language processing capabilities.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -444,16 +446,16 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
                  <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0">
-                       <img src={logo.src} alt="Logo" className="w-8 h-8 invert-1 brightness-0" />
+                       <Image src={logo.src} alt="Logo" className="w-8 h-8 invert-1 brightness-0" />
                     </div>
                     <div>
                       <p className="text-white font-semibold text-lg">Aryabhat.ai Team</p>
                       <p className="text-blue-200 text-sm">AI Specialists</p>
                     </div>
                  </div>
-                 <p className="text-blue-50 italic text-lg leading-relaxed">
-                   "Whether you're seeking cutting-edge automation solutions, intelligent data insights, or expert AI consulting, our team of professionals is here to guide you every step of the way."
-                 </p>
+                <p className="text-blue-50 italic text-lg leading-relaxed">
+                  {"\"Whether you're seeking cutting-edge automation solutions, intelligent data insights, or expert AI consulting, our team of professionals is here to guide you every step of the way.\""}
+                </p>
               </div>
             </div>
           </div>
@@ -464,7 +466,7 @@ export default function HomePage() {
       <footer className="border-t border-white/5 py-12 px-6 bg-[#000206]">
          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
-               <img src={logo.src} alt="Aryabhat" className="h-6 w-auto invert brightness-200" />
+               <Image src={logo.src} alt="Aryabhat" className="h-6 w-auto invert brightness-200" />
                <span className="text-slate-400 font-medium">Aryabhat.ai</span>
             </div>
             <div className="flex gap-8 text-sm text-slate-500">
@@ -478,39 +480,3 @@ export default function HomePage() {
     </div>
   )
 }
-
-// 3D Tilt Wrapper Component
-const TiltWrapper = ({ children }: { children: React.ReactNode }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const rotateX = useTransform(y, [-100, 100], [5, -5]);
-  const rotateY = useTransform(x, [-100, 100], [-5, 5]);
-
-  function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-    x.set(xPct * 200);
-    y.set(yPct * 200);
-  }
-
-  function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
-  }
-
-  return (
-    <motion.div
-      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="relative z-10"
-    >
-      {children}
-    </motion.div>
-  );
-};
