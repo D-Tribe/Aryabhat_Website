@@ -6,8 +6,8 @@
 9:I[9665,[],"ViewportBoundary"]
 b:I[9665,[],"MetadataBoundary"]
 d:I[6614,[],""]
-:HL["/_next/static/css/f5e323968fbe06ef.css","style"]
-5:T8afd,<div class="ambient-glow"></div>
+:HL["/_next/static/css/a448f631e1d266db.css","style"]
+5:T7dfc,<div class="ambient-glow"></div>
 <canvas id="neural-canvas"></canvas>
 
 <nav>
@@ -146,7 +146,6 @@ d:I[6614,[],""]
     </div>
 </section>
 
-
 <!-- CHALLENGE & SOLUTION -->
 <section id="challenge">
     <div class="container">
@@ -236,7 +235,7 @@ d:I[6614,[],""]
         <!-- Finance Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="finance">
                     <h3><i class="fa-solid fa-building-columns"></i> Finance</h3>
                     <p>Instantly retrieve revenue figures, risk assessments, and historical data from thousands of financial reports and SQL databases.</p>
                     <div class="industry-tags">
@@ -257,24 +256,8 @@ d:I[6614,[],""]
                             <div class="model">GPT OSS</div>
                         </div>
                     </div>
-                    <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">What were our Q3 revenue figures for APAC?</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                Q3 Revenue for APAC was <strong>$4.2M</strong>, a <span style="color: #22c55e;">15% increase</span> YoY.
-                                <div class="data-card">
-                                    <div class="data-row"><span>Singapore</span><span>$1.8M</span></div>
-                                    <div class="data-row"><span>Japan</span><span>$1.4M</span></div>
-                                    <div class="data-row"><span>India</span><span>$1.0M</span></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="chat-body" id="dynamic-chat-body">
+                        <!-- Messages will be dynamically inserted here -->
                     </div>
                 </div>
             </div>
@@ -283,7 +266,7 @@ d:I[6614,[],""]
         <!-- Healthcare Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="healthcare">
                     <h3><i class="fa-solid fa-hospital"></i> Healthcare</h3>
                     <p>Empower clinical staff to query patient protocols, drug interactions, and research papers using natural voice commands.</p>
                     <div class="industry-tags">
@@ -305,18 +288,7 @@ d:I[6614,[],""]
                         </div>
                     </div>
                     <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">Show protocol for Type 2 Diabetes intake.</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                Standard protocol requires immediate <strong>HgbA1c test</strong> followed by <em>Metformin initiation</em> if levels > 7.5%.
-                            </div>
-                        </div>
+                        <!-- This will be populated when healthcare section is in view -->
                     </div>
                 </div>
             </div>
@@ -325,7 +297,7 @@ d:I[6614,[],""]
         <!-- Manufacturing Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="manufacturing">
                     <h3><i class="fa-solid fa-industry"></i> Manufacturing</h3>
                     <p>Reduce downtime by allowing field technicians to instantly pull up maintenance schedules and error code manuals on the floor.</p>
                     <div class="industry-tags">
@@ -347,18 +319,7 @@ d:I[6614,[],""]
                         </div>
                     </div>
                     <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">Machine A-12 is throwing Error 504.</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                <strong style="color: #ef4444;">Error 504</strong> indicates Hydraulic Pressure Loss. Check the main seal on <strong>Valve B</strong>. See maintenance manual page 47.
-                            </div>
-                        </div>
+                        <!-- This will be populated when manufacturing section is in view -->
                     </div>
                 </div>
             </div>
@@ -367,7 +328,7 @@ d:I[6614,[],""]
         <!-- Legal Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="legal">
                     <h3><i class="fa-solid fa-gavel"></i> Legal</h3>
                     <p>Accelerate discovery by querying contract repositories for specific clauses, expiration dates, and liability terms instantly.</p>
                     <div class="industry-tags">
@@ -389,22 +350,7 @@ d:I[6614,[],""]
                         </div>
                     </div>
                     <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">List contracts expiring in the next 30 days.</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                Found <strong>3 contracts</strong> expiring soon:
-                                <div class="data-card">
-                                    <div class="data-row"><span>Vendor X</span><span>Feb 12, 2026</span></div>
-                                    <div class="data-row"><span>Logistics Co</span><span>Feb 18, 2026</span></div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- This will be populated when legal section is in view -->
                     </div>
                 </div>
             </div>
@@ -489,9 +435,9 @@ d:I[6614,[],""]
                     <i class="fa-solid fa-microphone feature-icon" style="color: var(--primary);"></i>
                     <h4 style="margin-bottom: 10px;">Speech Recognition</h4>
                     <p class="text-muted small" style="margin-top: 10px;">Automatic Speech Recognition (ASR) enables devices to interpret human speech seamlessly.</p>
-                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                    <!-- <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
                         <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">23</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -501,9 +447,9 @@ d:I[6614,[],""]
                     <i class="fa-solid fa-language feature-icon" style="color: var(--secondary);"></i>
                     <h4 style="margin-bottom: 10px;">Machine Translation</h4>
                     <p class="text-muted small" style="margin-top: 10px;">Neural Machine Translation (NMT) uses deep learning for contextually accurate text translation.</p>
-                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                    <!-- <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
                         <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">36</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -513,15 +459,16 @@ d:I[6614,[],""]
                     <i class="fa-solid fa-file-image feature-icon" style="color: var(--accent);"></i>
                     <h4 style="margin-bottom: 10px;">Optical Character Rec</h4>
                     <p class="text-muted small" style="margin-top: 10px;">OCR technology converts printed and handwritten text into machine-readable data instantly.</p>
-                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                    <!-- <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
                         <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">19</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
 <!-- TESTIMONIALS -->
 <section id="reviews">
     <div class="container">
@@ -666,7 +613,7 @@ d:I[6614,[],""]
             &copy; 2025 Aryabhat AI. All rights reserved. Version 2.0
         </div>
     </div>
-</footer>0:{"P":null,"b":"XuoPVezBjtmzIsDeK6SGj","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f5e323968fbe06ef.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],["$","title",null,{"children":"Aryabhat | Intelligent Enterprise Knowledge Assistant"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap","rel":"stylesheet"}],["$","link",null,{"rel":"stylesheet","href":"/style.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}]]}],["$","body",null,{"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","pCb4CL9GhrjoR7dtMgFdu",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}
+</footer>0:{"P":null,"b":"Nkqt_BiBhYSwUk4_IjSYc","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a448f631e1d266db.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],["$","title",null,{"children":"Aryabhat | Intelligent Enterprise Knowledge Assistant"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap","rel":"stylesheet"}],["$","link",null,{"rel":"stylesheet","href":"/style.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}]]}],["$","body",null,{"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Txc5RCAX-VQe2_ZRtCrSZ",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}
 a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 7:null
 8:null

@@ -637,12 +637,51 @@
             align-items: start;
         }
 
-        /* Industry Info Column */
+        /* Default state */
         .industry-info {
             display: flex;
             flex-direction: column;
             justify-content: center;
             min-height: 400px;
+            position: relative;
+            padding-left: 30px;
+            transition: all 0.4s ease;
+        }
+
+        /* Vertical line - hidden by default */
+        .industry-info::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 0%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            box-shadow: 0 0 20px var(--primary);
+            transition: height 0.6s ease, opacity 0.4s ease;
+            opacity: 0;
+        }
+
+        /* Active state - show vertical line */
+        .industry-info.active::before {
+            height: 80%;
+            opacity: 0.5;
+        }
+
+        /* Optional: subtle pulse on the line */
+        .industry-info.active::before {
+            animation: linePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes linePulse {
+            0%, 100% {
+                box-shadow: 0 0 20px var(--primary);
+            }
+            50% {
+                box-shadow: 0 0 30px var(--primary), 0 0 40px var(--primary);
+            }
         }
 
         .industry-info h3 {
@@ -775,7 +814,7 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-
+        /* Add this new CSS block */
         .avatar.ai {
             background: transparent;
             border: 1px solid var(--border);
@@ -793,6 +832,17 @@
             border-radius: 12px;
             font-size: 0.95rem;
             line-height: 1.6;
+        }
+        
+        .msg-bubble.typing::after {
+            content: '|';
+            animation: blink-cursor 0.8s infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink-cursor {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
         }
 
         .msg-row.ai .msg-bubble {
