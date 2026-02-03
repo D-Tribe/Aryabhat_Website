@@ -262,6 +262,9 @@ const chatScenarios = {
                 { k: 'Singapore', v: '$1.8M' },
                 { k: 'Japan', v: '$1.4M' },
                 { k: 'India', v: '$1.0M' }
+            ],
+            sources: [
+                'Q3_Financial_Report_2025.pdf'
             ]
         }
     ],
@@ -269,25 +272,46 @@ const chatScenarios = {
         { type: 'user', text: 'Show protocol for Type 2 Diabetes intake.' },
         { 
             type: 'ai', 
-            text: 'Standard protocol requires immediate <strong>HgbA1c test</strong> followed by <em>Metformin initiation</em> if levels > 7.5%.' 
+            text: 'Standard protocol requires immediate <strong>HgbA1c test</strong> followed by <em>Metformin initiation</em> if levels > 7.5%.',
+            sources: [
+                'Clinical_Protocols_2025.pdf',
+                'Diabetes_Treatment_Guidelines.docx'
+            ],
+            followUps: [
+                'What are the contraindications for Metformin?',
+                'Show alternative treatment pathways',
+                'What monitoring schedule is required?'
+            ]
         }
     ],
     manufacturing: [
         { type: 'user', text: 'Machine A-12 is throwing Error 504.' },
         { 
             type: 'ai', 
-            text: '<strong style="color: #ef4444;">Error 504</strong> indicates Hydraulic Pressure Loss. Check the main seal on <strong>Valve B</strong>. See maintenance manual page 47.' 
+            text: '<strong style="color: #ef4444;">Error 504</strong> indicates Hydraulic Pressure Loss. Check the main seal on <strong>Valve B</strong>. See maintenance manual page 47.',
+            sources: [
+                'Machine_A12_Manual.pdf (Page 47)',
+                'Error_Code_Database.xlsx'
+            ],
+            followUps: [
+                'Show maintenance history for this machine',
+                'What parts are needed for repair?',
+                'Are there similar errors logged recently?'
+            ]
         }
     ],
     legal: [
         { type: 'user', text: 'List contracts expiring in the next 30 days.' },
         { 
             type: 'ai', 
-            text: 'Found <strong>given contracts</strong> expiring soon:', 
+            text: 'Found <strong>2 contracts</strong> expiring soon:', 
             hasData: true, 
             data: [
                 { k: 'Vendor X', v: 'Feb 12, 2026' },
                 { k: 'Logistics Co', v: 'Feb 18, 2026' }
+            ],
+            sources: [
+                'contract_26-27.xlsx',
             ]
         }
     ]
@@ -370,7 +394,9 @@ function playChatAnimation(key) {
             } else {
                 typeWriterHTML(bubble, msg.text, 15);
             }
-
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = msg.text;
+            const textLength = (tempDiv.textContent || tempDiv.innerText).length;
             if(msg.hasData) {
                 const card = document.createElement('div');
                 card.className = 'data-card';
@@ -391,6 +417,55 @@ function playChatAnimation(key) {
                 }, textLength * 15 + 100);
             }
 
+            if(msg.type === 'ai' && msg.sources && msg.sources.length > 0) {
+                const sourcesDiv = document.createElement('div');
+                sourcesDiv.className = 'msg-sources';
+                
+                const sourceLabel = document.createElement('div');
+                sourceLabel.className = 'source-label';
+                sourceLabel.innerHTML = '<i class="fa-solid fa-link"></i> Sources';
+                sourcesDiv.appendChild(sourceLabel);
+                
+                msg.sources.forEach(source => {
+                    const sourceItem = document.createElement('div');
+                    sourceItem.className = 'source-item';
+                    sourceItem.innerHTML = `
+                        <i class="fa-solid fa-file-alt"></i>
+                        <span>${source}</span>
+                    `;
+                    sourcesDiv.appendChild(sourceItem);
+                });
+                
+                setTimeout(() => {
+                    bubble.appendChild(sourcesDiv);
+                }, textLength * 15 + (msg.hasData ? 200 : 100));
+            }
+
+            // Add follow-up questions if present
+            if(msg.type === 'ai' && msg.followUps && msg.followUps.length > 0) {
+                const followUpsDiv = document.createElement('div');
+                followUpsDiv.className = 'msg-followups';
+                
+                const followUpLabel = document.createElement('div');
+                followUpLabel.className = 'followup-label';
+                followUpLabel.textContent = 'Related Questions';
+                followUpsDiv.appendChild(followUpLabel);
+                
+                msg.followUps.forEach(question => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.className = 'followup-question';
+                    questionDiv.innerHTML = `
+                        <i class="fa-solid fa-chevron-right"></i>
+                        ${question}
+                    `;
+                    followUpsDiv.appendChild(questionDiv);
+                });
+                
+                setTimeout(() => {
+                    bubble.appendChild(followUpsDiv);
+                }, textLength * 15 + (msg.hasData ? 300 : 200) + (msg.sources ? 100 : 0));
+            }
+
             row.appendChild(avatar);
             row.appendChild(bubble);
             container.appendChild(row);
@@ -400,7 +475,7 @@ function playChatAnimation(key) {
                 console.log('✓ Message shown');
             }, 50);
         }, delay);
-        delay += (msg.type === 'user' ? 500 : 1800);
+        delay += (msg.type === 'user' ? 500 : 2500);
     });
 }
 
