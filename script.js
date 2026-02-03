@@ -1,18 +1,48 @@
 // ========================================
 // 1. LENIS SMOOTH SCROLL INITIALIZATION
 // ========================================
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    direction: 'vertical',
-});
+let lenis;
+const isMobile = window.innerWidth <= 768;
 
+if (!isMobile) {
+    console.log("Desktop detected: Initializing Lenis smooth scroll.");
+    lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+        direction: 'vertical',
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+} else {
+    console.log("Mobile detected: Skipping Lenis initialization. Using native scroll.");
+}
+
+// Update the RAF to only run if lenis exists
 function raf(time) {
-    lenis.raf(time);
+    if (lenis) {
+        lenis.raf(time);
+    }
     requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);
+requestAnimationFrame(raf); 
+
+// const lenis = new Lenis({
+//     duration: 1.2,
+//     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//     smooth: true,
+//     direction: 'vertical',
+// });
+
+// function raf(time) {
+//     lenis.raf(time);
+//     requestAnimationFrame(raf);
+// }
+// requestAnimationFrame(raf);
 
 // ========================================
 // 2. GSAP REGISTRATION
