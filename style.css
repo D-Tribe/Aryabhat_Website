@@ -456,10 +456,6 @@
             .hero h1 { font-size: 3rem; }
             .grid-2 { grid-template-columns: 1fr; }
             .nav-island { justify-content: center; }
-            .chat-use-case div[style*="max-width: 70%"] { max-width: 90% !important;}
-            .chat-use-case div[style*="flex-direction: row"] { flex-direction: column !important;}
-            .section-header h2 { font-size: 2rem; }
-            .grid-3 { grid-template-columns: 1fr; }
         }
 
         /* Add to your <style> section */
@@ -1016,23 +1012,6 @@
     }
 
     @media (max-width: 768px) {
-        html, body {
-            overflow-x: hidden !important;
-            overflow-y: auto !important;
-            height: auto !important;
-            position: static !important;
-        }
-        html.lenis, .lenis.lenis-smooth, .lenis.lenis-stopped {
-            height: auto !important;
-            overflow: auto !important;
-            scroll-behavior: auto !important; /* Revert to native scroll behavior */
-        }
-        body {
-            overflow-x: hidden !important;
-        }
-        .hero {
-        padding-top: 100px; /* Adjust padding for fixed nav */
-    }
         .testimonial-container {
             max-width: 100%;
         }
@@ -1219,4 +1198,32 @@
 .followup-question:hover {
     background: rgba(59, 130, 246, 0.12);
     border-color: rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+    /* Overwrite Lenis/general styles for native mobile scroll performance */
+    html, body {
+        overflow-x: hidden !important; /* Ensure no horizontal scroll */
+        overflow-y: auto !important; /* Ensure vertical scroll is native */
+        height: auto !important;
+        position: static !important;
+    }
+    
+    /* Stop Lenis from applying its stop/scroll-behavior styles */
+    html.lenis, .lenis.lenis-smooth, .lenis.lenis-stopped {
+        height: auto !important;
+        overflow: auto !important;
+        scroll-behavior: auto !important; /* Revert to native scroll behavior */
+    }
+    
+    /* Ensure body scroll is not hidden */
+    body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important; /* Re-apply auto just in case */
+    }
+    
+    /* Adjust Hero padding if necessary due to fixed nav */
+    .hero {
+        padding-top: 120px; /* Slightly larger top padding for smaller screens if nav is fixed */
+    }
 }

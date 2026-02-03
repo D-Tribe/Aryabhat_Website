@@ -12,37 +12,18 @@ if (!isMobile) {
         smooth: true,
         direction: 'vertical',
     });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
 } else {
     console.log("Mobile detected: Skipping Lenis initialization. Using native scroll.");
 }
 
-// Update the RAF to only run if lenis exists
 function raf(time) {
     if (lenis) {
         lenis.raf(time);
     }
     requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf); 
+requestAnimationFrame(raf);
 
-// const lenis = new Lenis({
-//     duration: 1.2,
-//     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//     smooth: true,
-//     direction: 'vertical',
-// });
-
-// function raf(time) {
-//     lenis.raf(time);
-//     requestAnimationFrame(raf);
-// }
-// requestAnimationFrame(raf);
 
 // ========================================
 // 2. GSAP REGISTRATION
@@ -648,5 +629,5 @@ document.addEventListener('DOMContentLoaded', () => {
     playChatAnimation('finance');
     
     // Initialize testimonials
-    // initTestimonials();
+    initTestimonials();
 });
