@@ -615,7 +615,50 @@ function initTestimonials() {
 }
 
 // ========================================
-// 14. INITIALIZATION ON PAGE LOAD
+// 14. DYNAMIC ARROW SWAP FOR ARCHITECTURE
+// ========================================
+const ARCHITECTURE_ARROW_ID = 'architecture-arrow';
+const ARCHITECTURE_ARROW_ID_02 = 'architecture-arrow-02';
+const MOBILE_BREAKPOINT = 750;
+
+function updateArchitectureArrow() {
+    const arrowContainer = document.getElementById(ARCHITECTURE_ARROW_ID);
+    if (!arrowContainer) return;
+
+    const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+    const currentIconClass = arrowContainer.querySelector('i')?.className;
+
+    let targetClass = isMobile 
+        ? 'fa-solid fa-arrow-down' 
+        : 'fa-solid fa-arrow-right';
+
+    // Only update if the class has actually changed
+    if (!currentIconClass || !currentIconClass.includes(isMobile ? 'fa-arrow-down' : 'fa-arrow-right')) {
+        arrowContainer.innerHTML = `<i class="fa-solid ${isMobile ? 'fa-arrow-down' : 'fa-arrow-right'}"></i>`;
+        console.log(`Architecture arrow updated to: ${isMobile ? 'down' : 'right'}`);
+    }
+}
+
+function updateArchitectureArrow02() {
+    const arrowContainer = document.getElementById(ARCHITECTURE_ARROW_ID_02);
+    if (!arrowContainer) return;
+
+    const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+    const currentIconClass = arrowContainer.querySelector('i')?.className;
+
+    let targetClass = isMobile 
+        ? 'fa-solid fa-arrow-down' 
+        : 'fa-solid fa-arrow-right';
+
+    // Only update if the class has actually changed
+    if (!currentIconClass || !currentIconClass.includes(isMobile ? 'fa-arrow-down' : 'fa-arrow-right')) {
+        arrowContainer.innerHTML = `<i class="fa-solid ${isMobile ? 'fa-arrow-down' : 'fa-arrow-right'}"></i>`;
+        console.log(`Architecture arrow updated to: ${isMobile ? 'down' : 'right'}`);
+    }
+}
+
+// ========================================
+// 15. INITIALIZATION ON PAGE LOAD
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial industry title
@@ -630,4 +673,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize testimonials
     initTestimonials();
+
+    updateArchitectureArrow(); 
+    updateArchitectureArrow02();
 });
+
+window.addEventListener('resize', updateArchitectureArrow);
+window.addEventListener('resize', updateArchitectureArrow02);
