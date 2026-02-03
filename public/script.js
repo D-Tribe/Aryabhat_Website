@@ -252,8 +252,8 @@ function typeWriterHTML(element, htmlContent, speed = 20) {
 function getIndustryTitle(key) {
     const titles = {
         'finance': 'Finance',
-        'healthcare': 'Healthcare',
-        'manufacturing': 'Manufacturing',
+        'healthcare': 'Health',
+        'manufacturing': 'Safety',
         'legal': 'Legal'
     };
     return titles[key] || key.charAt(0).toUpperCase() + key.slice(1);
