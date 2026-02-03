@@ -118,8 +118,8 @@ html {
   width: 100%;
   height: auto;
   position: static;
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
+  overscroll-behavior-y: auto;
+  overscroll-behavior-x: auto;
 }
 
 body {
@@ -128,7 +128,7 @@ body {
   width: 100%;
   height: auto;
   position: relative;
-  overscroll-behavior: none;
+  overscroll-behavior: auto;
   -ms-overflow-style: auto;
   -ms-scroll-chaining: none;
   -ms-content-zooming: none;
