@@ -1,5 +1,4 @@
 import "./globals.css";
-import Script from "next/script";
 import ThirdPartyScripts from "@/components/ThirdPartyScripts";
 
 export default function RootLayout({
