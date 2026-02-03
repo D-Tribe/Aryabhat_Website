@@ -137,7 +137,6 @@
     </div>
 </section>
 
-
 <!-- CHALLENGE & SOLUTION -->
 <section id="challenge">
     <div class="container">
@@ -227,7 +226,7 @@
         <!-- Finance Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="finance">
                     <h3><i class="fa-solid fa-building-columns"></i> Finance</h3>
                     <p>Instantly retrieve revenue figures, risk assessments, and historical data from thousands of financial reports and SQL databases.</p>
                     <div class="industry-tags">
@@ -248,24 +247,8 @@
                             <div class="model">GPT OSS</div>
                         </div>
                     </div>
-                    <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">What were our Q3 revenue figures for APAC?</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                Q3 Revenue for APAC was <strong>$4.2M</strong>, a <span style="color: #22c55e;">15% increase</span> YoY.
-                                <div class="data-card">
-                                    <div class="data-row"><span>Singapore</span><span>$1.8M</span></div>
-                                    <div class="data-row"><span>Japan</span><span>$1.4M</span></div>
-                                    <div class="data-row"><span>India</span><span>$1.0M</span></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="chat-body" id="dynamic-chat-body">
+                        <!-- Messages will be dynamically inserted here -->
                     </div>
                 </div>
             </div>
@@ -274,7 +257,7 @@
         <!-- Healthcare Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="healthcare">
                     <h3><i class="fa-solid fa-hospital"></i> Healthcare</h3>
                     <p>Empower clinical staff to query patient protocols, drug interactions, and research papers using natural voice commands.</p>
                     <div class="industry-tags">
@@ -296,18 +279,7 @@
                         </div>
                     </div>
                     <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">Show protocol for Type 2 Diabetes intake.</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                Standard protocol requires immediate <strong>HgbA1c test</strong> followed by <em>Metformin initiation</em> if levels > 7.5%.
-                            </div>
-                        </div>
+                        <!-- This will be populated when healthcare section is in view -->
                     </div>
                 </div>
             </div>
@@ -316,7 +288,7 @@
         <!-- Manufacturing Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="manufacturing">
                     <h3><i class="fa-solid fa-industry"></i> Manufacturing</h3>
                     <p>Reduce downtime by allowing field technicians to instantly pull up maintenance schedules and error code manuals on the floor.</p>
                     <div class="industry-tags">
@@ -338,18 +310,7 @@
                         </div>
                     </div>
                     <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">Machine A-12 is throwing Error 504.</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                <strong style="color: #ef4444;">Error 504</strong> indicates Hydraulic Pressure Loss. Check the main seal on <strong>Valve B</strong>. See maintenance manual page 47.
-                            </div>
-                        </div>
+                        <!-- This will be populated when manufacturing section is in view -->
                     </div>
                 </div>
             </div>
@@ -358,7 +319,7 @@
         <!-- Legal Industry -->
         <div class="industry-block reveal-up">
             <div class="industry-content">
-                <div class="industry-info">
+                <div class="industry-info industry-info-block" data-id="legal">
                     <h3><i class="fa-solid fa-gavel"></i> Legal</h3>
                     <p>Accelerate discovery by querying contract repositories for specific clauses, expiration dates, and liability terms instantly.</p>
                     <div class="industry-tags">
@@ -380,22 +341,7 @@
                         </div>
                     </div>
                     <div class="chat-body">
-                        <div class="msg-row user show">
-                            <div class="avatar u">U</div>
-                            <div class="msg-bubble">List contracts expiring in the next 30 days.</div>
-                        </div>
-                        <div class="msg-row ai show">
-                            <div class="avatar ai">
-                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
-                            </div>
-                            <div class="msg-bubble">
-                                Found <strong>3 contracts</strong> expiring soon:
-                                <div class="data-card">
-                                    <div class="data-row"><span>Vendor X</span><span>Feb 12, 2026</span></div>
-                                    <div class="data-row"><span>Logistics Co</span><span>Feb 18, 2026</span></div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- This will be populated when legal section is in view -->
                     </div>
                 </div>
             </div>
@@ -480,9 +426,9 @@
                     <i class="fa-solid fa-microphone feature-icon" style="color: var(--primary);"></i>
                     <h4 style="margin-bottom: 10px;">Speech Recognition</h4>
                     <p class="text-muted small" style="margin-top: 10px;">Automatic Speech Recognition (ASR) enables devices to interpret human speech seamlessly.</p>
-                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                    <!-- <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
                         <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">23</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -492,9 +438,9 @@
                     <i class="fa-solid fa-language feature-icon" style="color: var(--secondary);"></i>
                     <h4 style="margin-bottom: 10px;">Machine Translation</h4>
                     <p class="text-muted small" style="margin-top: 10px;">Neural Machine Translation (NMT) uses deep learning for contextually accurate text translation.</p>
-                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                    <!-- <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
                         <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">36</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -504,15 +450,16 @@
                     <i class="fa-solid fa-file-image feature-icon" style="color: var(--accent);"></i>
                     <h4 style="margin-bottom: 10px;">Optical Character Rec</h4>
                     <p class="text-muted small" style="margin-top: 10px;">OCR technology converts printed and handwritten text into machine-readable data instantly.</p>
-                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                    <!-- <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
                         <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">19</span></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
 <!-- TESTIMONIALS -->
 <section id="reviews">
     <div class="container">

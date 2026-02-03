@@ -219,6 +219,7 @@ function typeWriterHTML(element, htmlContent, speed = 20) {
     
     let i = 0;
     element.textContent = '';
+    element.classList.add('typing'); // ADD cursor
     
     function type() {
         if (i < textContent.length) {
@@ -226,6 +227,7 @@ function typeWriterHTML(element, htmlContent, speed = 20) {
             i++;
             setTimeout(type, speed);
         } else {
+            element.classList.remove('typing'); // REMOVE cursor
             // After typing is complete, replace with full HTML
             element.innerHTML = htmlContent;
         }
@@ -234,7 +236,20 @@ function typeWriterHTML(element, htmlContent, speed = 20) {
 }
 
 // ========================================
-// 11. INDUSTRY CHAT SCENARIOS
+// 11. GET INDUSTRY TITLE HELPER
+// ========================================
+function getIndustryTitle(key) {
+    const titles = {
+        'finance': 'Finance',
+        'healthcare': 'Healthcare',
+        'manufacturing': 'Manufacturing',
+        'legal': 'Legal'
+    };
+    return titles[key] || key.charAt(0).toUpperCase() + key.slice(1);
+}
+
+// ========================================
+// 12. INDUSTRY CHAT SCENARIOS
 // ========================================
 const chatScenarios = {
     finance: [
@@ -268,7 +283,7 @@ const chatScenarios = {
         { type: 'user', text: 'List contracts expiring in the next 30 days.' },
         { 
             type: 'ai', 
-            text: 'Found <strong>3 contracts</strong> expiring soon:', 
+            text: 'Found <strong>given contracts</strong> expiring soon:', 
             hasData: true, 
             data: [
                 { k: 'Vendor X', v: 'Feb 12, 2026' },
@@ -279,24 +294,25 @@ const chatScenarios = {
 };
 
 let currentScenario = '';
-let currentIndustryTitle = '';
 
-function getIndustryTitle(key) {
-    const titles = {
-        'finance': 'Finance',
-        'healthcare': 'Healthcare',
-        'manufacturing': 'Manufacturing',
-        'legal': 'Legal'
-    };
-    return titles[key] || key.charAt(0).toUpperCase() + key.slice(1);
-}
-
+// ========================================
+// 13. PLAY CHAT ANIMATION
+// ========================================
 function playChatAnimation(key) {
     console.log('=== PLAY CHAT ANIMATION ===');
     console.log('Animation key:', key);
     
-    const container = document.getElementById('dynamic-chat-body');
-    const modelElement = document.querySelector('.tag-model .model');
+    // Find the specific industry block and its chat body
+    const industryBlock = document.querySelector(`.industry-info-block[data-id="${key}"]`);
+    if (!industryBlock) {
+        console.error('Industry block not found for:', key);
+        return;
+    }
+    
+    // Find the chat body within the same industry block
+    const industryContent = industryBlock.closest('.industry-content');
+    const container = industryContent.querySelector('.chat-body');
+    const modelElement = industryContent.querySelector('.tag-model .model');
     
     console.log('Container found:', !!container);
     console.log('Model element found:', !!modelElement);
@@ -309,15 +325,11 @@ function playChatAnimation(key) {
     // Update the Title/Tag
     const title = getIndustryTitle(key);
     console.log('Industry title:', title);
-    console.log('Current industry title:', currentIndustryTitle);
     
-    if (currentIndustryTitle !== title) {
-        currentIndustryTitle = title;
-        modelElement.innerText = currentIndustryTitle;
-        console.log('✓ Updated title to:', title);
-    }
+    modelElement.innerText = title;
+    console.log('✓ Updated title to:', title);
 
-    if (currentScenario === key) {
+    if (currentScenario === key && container.children.length > 0) {
         console.log('⊘ Scenario already active, skipping');
         return;
     }
@@ -344,7 +356,7 @@ function playChatAnimation(key) {
                 avatar.innerText = 'U';
             } else {
                 const logoImg = document.createElement('img');
-                logoImg.src = 'logo.png';
+                logoImg.src = '/logo.png';
                 logoImg.alt = 'Aryabhat';
                 logoImg.style.cssText = 'width: 65%; height: 65%; object-fit: contain; filter: invert(1)';
                 avatar.appendChild(logoImg);
@@ -393,7 +405,7 @@ function playChatAnimation(key) {
 }
 
 // ========================================
-// 12. INDUSTRY SCROLL SPY
+// 14. INDUSTRY SCROLL SPY
 // ========================================
 const industryBlocks = document.querySelectorAll('.industry-info-block');
 const scrollSpy = new IntersectionObserver((entries) => {
@@ -403,12 +415,14 @@ const scrollSpy = new IntersectionObserver((entries) => {
             entry.target.classList.add('active');
             
             const scenarioKey = entry.target.getAttribute('data-id');
-            if(currentScenario !== scenarioKey) {
-                playChatAnimation(scenarioKey);
-            }
+            console.log('Scroll spy triggered for:', scenarioKey);
+            playChatAnimation(scenarioKey);
         }
     });
-}, { threshold: 0.5 });
+}, { 
+    threshold: 0.6,
+    rootMargin: '-100px 0px -100px 0px'
+});
 
 industryBlocks.forEach(block => scrollSpy.observe(block));
 
@@ -519,11 +533,11 @@ function initTestimonials() {
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial industry title
-    currentIndustryTitle = getIndustryTitle('finance');
-    const initialModelElement = document.querySelector('.tag-model .model');
-    if(initialModelElement) {
-        initialModelElement.innerText = currentIndustryTitle;
-    }
+    // currentIndustryTitle = getIndustryTitle('finance');
+    // const initialModelElement = document.querySelector('.tag-model .model');
+    // if(initialModelElement) {
+    //     initialModelElement.innerText = currentIndustryTitle;
+    // }
     
     // Run first chat animation
     playChatAnimation('finance');
