@@ -505,7 +505,29 @@
             .grid-2 { grid-template-columns: 1fr; }
             .nav-island { justify-content: center; }
             
-            /* NEW: Mobile chat styles */
+            .card-wrapper .stat-box {
+                min-width: auto; 
+                flex-grow: 1; /* Allow boxes to take full width */
+            }
+
+            .card-wrapper .stat-box h4 {
+                font-size: 2rem; /* Make the numbers larger and more prominent on mobile */
+            }
+
+            /* If they are still side-by-side: */
+            .card-wrapper .stat-box {
+                /* Force them to stack vertically if they are still in a row layout */
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            /* Since the JS in style.js doesn't explicitly control the stats layout, 
+            we need to make sure the card itself can expand. */
+            .card-wrapper {
+                /* Ensure the card doesn't constrain its content too tightly */
+                height: auto; 
+            }
             .chat-use-case div[style*="max-width: 70%"] {
                 max-width: 90% !important;
             }
@@ -730,7 +752,9 @@
             border-radius: 16px;
             display: flex;
             flex-direction: column;
-            height: 500px;
+           
+            flex-grow: 1; 
+            min-height: 400px; 
             overflow: hidden;
         }
 
@@ -889,7 +913,8 @@
             }
             
             .industry-chat {
-                height: 450px;
+                height: auto;
+                min-height: 400px;
             }
             
             .industry-info {
@@ -907,7 +932,8 @@
             }
             
             .industry-chat {
-                height: 400px;
+                height: auto;
+                min-height: 400px;
             }
             
             .msg-bubble {
