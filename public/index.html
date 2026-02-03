@@ -1,0 +1,660 @@
+<div class="ambient-glow"></div>
+<canvas id="neural-canvas"></canvas>
+
+<nav>
+    <div class="nav-island">
+        <div class="logo">
+            <div style="width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <img src="/logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                </div>
+            <i class="fa-solid"></i> ARYABHAT
+        </div>
+        <div class="nav-links">
+            <a href="#challenge">Problem</a>
+            <a href="#features">Features</a>
+            <a href="#industries">Use Cases</a>
+            <a href="#faq">FAQs</a>
+            <a href="#contact">Pricing</a>
+            <!-- <a href="#docs">Docs</a> -->
+        </div>
+        <div class="nav-actions">
+            <!-- <a href="#docs" class="nav-btn-small nav-btn-ghost">Docs</a> -->
+            <a href="#contact" class="nav-btn-small nav-btn-fill">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="container">
+        <div class="badge-container">
+            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Instant Access</span>
+            <span class="hero-badge"><i class="fa-solid fa-lock"></i> Enterprise Security</span>
+            <span class="hero-badge"><i class="fa-solid fa-earth-americas"></i> Multi-Modal</span>
+        </div>
+        <h1 class="animate-text">Unlock the Power of <br> Your Data with AI</h1>
+        <br>
+        <p class="animate-fade">Aryabhat is your centralized Intelligent Enterprise Knowledge Assistant. Combine advanced AI with your documents and databases to get instant, accurate answers—no technical expertise required.</p>
+    </div>
+</header>
+
+<!-- ARCHITECTURE DIAGRAM SECTION -->
+<section style="padding: 10px 0;">
+    <div class="container">
+        <div class="architecture-flow">
+            <div class="arch-stage">
+                <div class="arch-column">
+                    <!-- PDF Files -->
+                    <div class="arch-node">
+                        <div class="node-icon-group ">
+                            <i class="fa-solid fa-file-pdf" style="font-size: 50px; padding: 10px; color: #ef4444;"></i>
+                            <i class="fa-solid fa-file-word" style="font-size: 50px; padding: 10px; color: #2563eb;"></i>
+                            <i class="fa-solid fa-file-excel" style="font-size: 50px; padding: 10px; color: #16a34a;"></i>
+                        </div>
+                            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">+3 Others</span>
+                        <!-- <div class="node-sublabel" style="margin-top: 15px;">Documents</div> -->
+                    </div>
+                    
+                    <div class="arch-node">
+                        <div class="node-icon-group">
+                            <i class="fa-brands fa-microsoft" style="font-size: 40px; padding: 8px; color: #0078d4;" title="OneDrive"></i>
+                            <i class="fa-brands fa-google-drive" style="font-size: 40px; padding: 8px; color: #0f9d58;" title="Google Drive"></i>
+                            <i class="fa-brands fa-aws" style="font-size: 40px; padding: 8px; color: #ff9900;" title="Amazon S3"></i>
+                        </div>
+                        <!-- ADDING THE REQUESTED TEXT HERE, AFTER THE LAST ICON -->
+                        <!-- <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 10px;">
+                            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">+10 Others</span>
+                        </div> -->
+                        <!-- <div class="node-sublabel" style="margin-top: 15px;">Connectors</div> -->
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="arch-node">
+                        <div class="node-icon-group">
+                            <i class="fa-solid fa-database" title="SQL" style="font-size: 50px; padding: 10px; color: #f97316;"></i>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+                                alt="PostgreSQL"
+                                title="PostgreSQL"
+                                style="height:80px; padding:10px; filter: brightness(1);"
+                                />
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg"
+                                alt="Oracle"
+                                title="Oracle"
+                                style="height:50px; padding:20px;"
+                                />
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 10px;">
+                            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">+2 Others</span>
+                        </div>
+                        <!-- <div class="node-sublabel" style="margin-top: 15px;">
+                            Databases
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="arch-column">
+                    <div class="arch-node xxlarge">
+                        <div class="node-icon xxlarge" style="background: rgba(139, 92, 246, 0.1);">
+                            <!-- <i class="fa-solid fa-brain"></i> -->
+                                <img src="/logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                            
+                        </div>
+                        <div class="node-label">Aryabhat</div>
+                        <!-- <div class="node-sublabel">Vector Embeddings</div>
+                        <div class="node-sublabel">Semantic Search</div>
+                        <div class="node-sublabel">LLM Inference</div> -->
+                    </div>
+                </div>
+
+                <div class="arch-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="arch-column">
+                    <div class="arch-node">
+                        <div class="node-icon" style="background: rgba(6, 182, 212, 0.1);">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <div class="node-label">Natural Text</div>
+                        <div class="node-sublabel">Instant Answers</div>
+                    </div>
+                    <div class="arch-node">
+                        <div class="node-icon" style="background: rgba(6, 182, 212, 0.1);">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <div class="node-label">Voice Output</div>
+                        <div class="node-sublabel">Multi-language</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CHALLENGE & SOLUTION -->
+<section id="challenge">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal-left">
+                <h2 style="margin-bottom: 20px;">The Challenge We Solve</h2>
+                <p class="text-muted" style="margin-bottom: 30px; font-size: 1.2rem;">Legacy knowledge management is broken. Does this sound familiar?</p>
+                <ul class="challenge-list" style="list-style: none;">
+                    <li><i class="fa-solid fa-xmark"></i> Employees waste hours searching siloed docs.</li>
+                    <li><i class="fa-solid fa-xmark"></i> Critical info trapped in PDFs & Spreadsheets.</li>
+                    <li><i class="fa-solid fa-xmark"></i> Only technical teams can query databases.</li>
+                    <li><i class="fa-solid fa-xmark"></i> Onboarding new members takes weeks.</li>
+                </ul>
+            </div>
+            <div class="card-wrapper reveal-right" style="border-color: var(--primary-glow);">
+                <div class="card-content">
+                    <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 15px;">Aryabhat Changes Everything</h3>
+                    <p style="margin-bottom: 30px; color: var(--text-muted);">
+                        We transform how your organization accesses information. By combining RAG (Retrieval-Augmented Generation) with your private data, we enable anyone to be an expert instantly.
+                    </p>
+                    <div style="display: flex; gap: 20px;">
+                        <div class="stat-box">
+                            <h4 style="color: var(--primary);">85%</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">Less Search Time</span>
+                        </div>
+                        <div class="stat-box">
+                            <h4 style="color: var(--secondary);">3x</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">Faster Decisions</span>
+                        </div>
+                            <div class="stat-box">
+                            <h4 style="color: var(--secondary);">95%</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">User Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+    <div class="container">
+        <div class="section-header reveal-up">
+            <h2>How It Works</h2>
+            <p>A seamless pipeline from raw data to intelligent insight.</p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="step-line"><div class="step-line-fill"></div></div>
+            
+            <div class="step-row reveal-up">
+                <div class="step-marker">1</div>
+                <div class="step-content">
+                    <h4>Centralize</h4>
+                    <p class="text-muted small" style="margin-top:10px;">Admins upload documents (PDF, Excel, Audio) and securely connect databases. We handle the ingestion pipeline automatically.</p>
+                </div>
+            </div>
+
+            <div class="step-row reveal-up">
+                <div class="step-marker">2</div>
+                <div class="step-content">
+                    <h4>Process</h4>
+                    <p class="text-muted small" style="margin-top:10px;">Our AI parses, indexes, and understands your content—transforming complex tables and unstructured audio into vector embeddings.</p>
+                </div>
+            </div>
+
+            <div class="step-row reveal-up">
+                <div class="step-marker">3</div>
+                <div class="step-content">
+                    <h4>Query</h4>
+                    <p class="text-muted small" style="margin-top:10px;">Users ask via natural language text or voice. Aryabhat retrieves the exact context and generates an accurate, cited answer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INDUSTRY APPLICATIONS -->
+<section id="industries">
+    <div class="container">
+        <div class="section-header reveal-up">
+            <h2>Industry Applications</h2>
+            <p>See how Aryabhat transforms knowledge access across sectors</p>
+        </div>
+        
+        <!-- Finance Industry -->
+        <div class="industry-block reveal-up">
+            <div class="industry-content">
+                <div class="industry-info">
+                    <h3><i class="fa-solid fa-building-columns"></i> Finance</h3>
+                    <p>Instantly retrieve revenue figures, risk assessments, and historical data from thousands of financial reports and SQL databases.</p>
+                    <div class="industry-tags">
+                        <span class="i-tag">#Q3_Reports</span>
+                        <span class="i-tag">#Revenue</span>
+                        <span class="i-tag">#Compliance</span>
+                    </div>
+                </div>
+                
+                <div class="industry-chat">
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <span class="chat-dot"></span>
+                            ARYABHAT
+                        </div>
+                        <div class="tag-model">
+                            <div class="model">Finance</div>
+                            <div class="model">GPT OSS</div>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="msg-row user show">
+                            <div class="avatar u">U</div>
+                            <div class="msg-bubble">What were our Q3 revenue figures for APAC?</div>
+                        </div>
+                        <div class="msg-row ai show">
+                            <div class="avatar ai">
+                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                            </div>
+                            <div class="msg-bubble">
+                                Q3 Revenue for APAC was <strong>$4.2M</strong>, a <span style="color: #22c55e;">15% increase</span> YoY.
+                                <div class="data-card">
+                                    <div class="data-row"><span>Singapore</span><span>$1.8M</span></div>
+                                    <div class="data-row"><span>Japan</span><span>$1.4M</span></div>
+                                    <div class="data-row"><span>India</span><span>$1.0M</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Healthcare Industry -->
+        <div class="industry-block reveal-up">
+            <div class="industry-content">
+                <div class="industry-info">
+                    <h3><i class="fa-solid fa-hospital"></i> Healthcare</h3>
+                    <p>Empower clinical staff to query patient protocols, drug interactions, and research papers using natural voice commands.</p>
+                    <div class="industry-tags">
+                        <span class="i-tag">#Protocols</span>
+                        <span class="i-tag">#Patient_Care</span>
+                        <span class="i-tag">#Research</span>
+                    </div>
+                </div>
+                
+                <div class="industry-chat">
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <span class="chat-dot"></span>
+                            ARYABHAT
+                        </div>
+                        <div class="tag-model">
+                            <div class="model">Healthcare</div>
+                            <div class="model">GPT OSS</div>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="msg-row user show">
+                            <div class="avatar u">U</div>
+                            <div class="msg-bubble">Show protocol for Type 2 Diabetes intake.</div>
+                        </div>
+                        <div class="msg-row ai show">
+                            <div class="avatar ai">
+                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                            </div>
+                            <div class="msg-bubble">
+                                Standard protocol requires immediate <strong>HgbA1c test</strong> followed by <em>Metformin initiation</em> if levels > 7.5%.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manufacturing Industry -->
+        <div class="industry-block reveal-up">
+            <div class="industry-content">
+                <div class="industry-info">
+                    <h3><i class="fa-solid fa-industry"></i> Manufacturing</h3>
+                    <p>Reduce downtime by allowing field technicians to instantly pull up maintenance schedules and error code manuals on the floor.</p>
+                    <div class="industry-tags">
+                        <span class="i-tag">#Maintenance</span>
+                        <span class="i-tag">#Inventory</span>
+                        <span class="i-tag">#Safety</span>
+                    </div>
+                </div>
+                
+                <div class="industry-chat">
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <span class="chat-dot"></span>
+                            ARYABHAT
+                        </div>
+                        <div class="tag-model">
+                            <div class="model">Manufacturing</div>
+                            <div class="model">GPT OSS</div>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="msg-row user show">
+                            <div class="avatar u">U</div>
+                            <div class="msg-bubble">Machine A-12 is throwing Error 504.</div>
+                        </div>
+                        <div class="msg-row ai show">
+                            <div class="avatar ai">
+                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                            </div>
+                            <div class="msg-bubble">
+                                <strong style="color: #ef4444;">Error 504</strong> indicates Hydraulic Pressure Loss. Check the main seal on <strong>Valve B</strong>. See maintenance manual page 47.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legal Industry -->
+        <div class="industry-block reveal-up">
+            <div class="industry-content">
+                <div class="industry-info">
+                    <h3><i class="fa-solid fa-gavel"></i> Legal</h3>
+                    <p>Accelerate discovery by querying contract repositories for specific clauses, expiration dates, and liability terms instantly.</p>
+                    <div class="industry-tags">
+                        <span class="i-tag">#Contracts</span>
+                        <span class="i-tag">#Clauses</span>
+                        <span class="i-tag">#Discovery</span>
+                    </div>
+                </div>
+                
+                <div class="industry-chat">
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <span class="chat-dot"></span>
+                            ARYABHAT
+                        </div>
+                        <div class="tag-model">
+                            <div class="model">Legal</div>
+                            <div class="model">GPT OSS</div>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="msg-row user show">
+                            <div class="avatar u">U</div>
+                            <div class="msg-bubble">List contracts expiring in the next 30 days.</div>
+                        </div>
+                        <div class="msg-row ai show">
+                            <div class="avatar ai">
+                                <img src="/logo.png" alt="Aryabhat" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                            </div>
+                            <div class="msg-bubble">
+                                Found <strong>3 contracts</strong> expiring soon:
+                                <div class="data-card">
+                                    <div class="data-row"><span>Vendor X</span><span>Feb 12, 2026</span></div>
+                                    <div class="data-row"><span>Logistics Co</span><span>Feb 18, 2026</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section id="features">
+    <div class="container">
+        <div class="section-header reveal-up">
+            <h2>Key Features</h2>
+        </div>
+        
+        <!-- Admin Features -->
+        <h3 style="margin-bottom: 30px; color: var(--primary); padding-left: 10px;" class="reveal-up">For Administrators</h3>
+        <div class="grid-3 reveal-up" style="margin-bottom: 60px;">
+            <div class="card-wrapper spotlight-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-database feature-icon"></i>
+                    <h4>DB Integration</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Connect any RDMS with a few clicks. Secure connection management with read-only access.</p>
+                </div>
+            </div>
+            <div class="card-wrapper spotlight-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-file-invoice feature-icon"></i>
+                    <h4>Doc Management</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Batch upload PDFs, Word, Excel. Advanced filtering and real-time processing status tracking.</p>
+                </div>
+            </div>
+            <div class="card-wrapper spotlight-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-sliders feature-icon"></i>
+                    <h4>Complete Control</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Security Rules for DB & Files, License management, detailed usage analytics, model selection (GPT-4, Claude), and access logs.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Features -->
+        <h3 style="margin-bottom: 30px; color: var(--secondary); padding-left: 10px;" class="reveal-up">For End Users</h3>
+        <div class="grid-3 reveal-up">
+            <div class="card-wrapper spotlight-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-comments feature-icon"></i>
+                    <h4>Natural Querying</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Ask like a colleague. No SQL needed. Aryabhat translates your intent into complex queries.</p>
+                </div>
+            </div>
+            <div class="card-wrapper spotlight-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-microphone feature-icon"></i>
+                    <h4>Multi-Modal</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Text or Voice interaction. Full support for over 20+ regional languages for input and output.</p>
+                </div>
+            </div>
+            <div class="card-wrapper spotlight-card">
+                <div class="card-content">
+                    <i class="fa-solid fa-book-open feature-icon"></i>
+                    <h4>Smart Context</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Remembers conversational history, suggests follow-ups, and organizes insights in personal Notebooks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="language-barriers" style="padding: 70px 0;">
+    <div class="container reveal-up">
+        <div class="section-header">
+            <h2 style="font-size: 2.8rem;">Breaking Language Barriers</h2>
+            <p>Powered by Bhashini, India's National Language Translation Mission, we offer cutting-edge language processing capabilities.</p>
+        </div>
+
+        <div class="grid-3" style="gap: 40px; margin-top: 50px;">
+            
+            <!-- Speech Recognition -->
+            <div class="card-wrapper spotlight-card" style="min-height: 280px;">
+                <div class="card-content">
+                    <i class="fa-solid fa-microphone feature-icon" style="color: var(--primary);"></i>
+                    <h4 style="margin-bottom: 10px;">Speech Recognition</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Automatic Speech Recognition (ASR) enables devices to interpret human speech seamlessly.</p>
+                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                        <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">23</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Machine Translation -->
+            <div class="card-wrapper spotlight-card" style="min-height: 280px;">
+                <div class="card-content">
+                    <i class="fa-solid fa-language feature-icon" style="color: var(--secondary);"></i>
+                    <h4 style="margin-bottom: 10px;">Machine Translation</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">Neural Machine Translation (NMT) uses deep learning for contextually accurate text translation.</p>
+                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                        <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">36</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OCR -->
+            <div class="card-wrapper spotlight-card" style="min-height: 280px;">
+                <div class="card-content">
+                    <i class="fa-solid fa-file-image feature-icon" style="color: var(--accent);"></i>
+                    <h4 style="margin-bottom: 10px;">Optical Character Rec</h4>
+                    <p class="text-muted small" style="margin-top: 10px;">OCR technology converts printed and handwritten text into machine-readable data instantly.</p>
+                    <div class="data-card" style="margin-top: 20px; border-color: var(--border-highlight);">
+                        <div class="data-row"><span>Languages Supported:</span> <span style="color: var(--text-main); font-weight: 600;">19</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- TESTIMONIALS -->
+<section id="reviews">
+    <div class="container">
+        <div class="section-header reveal-up">
+            <h2>Trusted By Enterprises</h2>
+        </div>
+        
+        <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;">
+            <button class="scroll-control" id="prevTestimonial">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="scroll-control" id="pauseTestimonial">
+                <i class="fa-solid fa-pause"></i>
+            </button>
+            <button class="scroll-control" id="nextTestimonial">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-track" id="testimonial-track">
+                
+                <div class="review-v-card">
+                    <div class="review-body">
+                        "Aryabhat has transformed how our team accesses information. What used to take hours now takes seconds. Our productivity has skyrocketed."
+                    </div>
+                    <div class="review-footer">
+                        <strong>Director of Operations</strong>
+                        <span>Manufacturing Company</span>
+                    </div>
+                </div>
+
+                <div class="review-v-card">
+                    <div class="review-body">
+                        "The ability to query our databases in plain language has democratized data access across our organization. Everyone can now make data-driven decisions."
+                    </div>
+                    <div class="review-footer">
+                        <strong>CTO</strong>
+                        <span>Financial Services Firm</span>
+                    </div>
+                </div>
+
+                <div class="review-v-card">
+                    <div class="review-body">
+                        "The voice interaction feature is a game-changer for our field teams. They can get answers on the go without typing."
+                    </div>
+                    <div class="review-footer">
+                        <strong>Head of Field Operations</strong>
+                        <span>Healthcare Provider</span>
+                    </div>
+                </div>
+
+                <div class="review-v-card">
+                    <div class="review-body">
+                        "Field technicians can now access equipment manuals instantly. Our maintenance downtime has decreased by 40% since implementing Aryabhat."
+                    </div>
+                    <div class="review-footer">
+                        <strong>Operations Manager</strong>
+                        <span>Industrial Manufacturing</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="container" style="max-width: 800px;">
+        <div class="section-header reveal-up">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-item reveal-up">
+            <div class="faq-question">Does Aryabhat support third-party cloud storage ?<i class="fa-solid fa-chevron-down faq-chevron"></i></div>
+            <div class="faq-answer"><div style="padding-bottom:20px;">Yes. Aryabhat supports integration with leading third-party cloud storage services, including OneDrive, Google Drive, and Amazon S3 buckets. This enables users to securely upload and manage personal or organizational documents.</div></div>
+        </div>
+        <div class="faq-item reveal-up">
+            <div class="faq-question">Does Aryabhat retain conversation history ?<i class="fa-solid fa-chevron-down faq-chevron"></i></div>
+            <div class="faq-answer"><div style="padding-bottom:20px;">Yes. Aryabhat is context-aware and retains conversation history, allowing users to ask follow-up questions and continue discussions without needing to restate prior information. This ensures a more seamless and efficient user experience compared to traditional search tools.</div></div>
+        </div>
+        <div class="faq-item reveal-up">
+            <div class="faq-question">How does Aryabhat handle multi-language environments ?<i class="fa-solid fa-chevron-down faq-chevron"></i></div>
+            <div class="faq-answer"><div style="padding-bottom:20px;">Not at all. Aryabhat is designed for non-technical users. Employees can ask questions in plain language—by text or voice—and Aryabhat automatically translates them into secure database queries and document searches behind the scenes.</div></div>
+        </div>
+        <div class="faq-item reveal-up">
+            <div class="faq-question">How are user licenses and access managed ?<i class="fa-solid fa-chevron-down faq-chevron"></i></div>
+            <div class="faq-answer"><div style="padding-bottom:20px;">User licenses and access are fully managed by administrators. Aryabhat provides comprehensive usage analytics and dashboard insights, allowing administrators to monitor adoption, track system usage, and maintain governance across the organization.</div></div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="card-wrapper reveal-up" style="text-align: center; max-width: 900px; margin: 0 auto; border-color: var(--primary);">
+            <div class="card-content">
+                <h2 class="gradient-text">JOIN THE REVOLUTION</h2>
+                <p class="text-muted" style="margin: 20px 0 40px; font-size: 1.1rem;">Request access to the Aryabhat Platform.
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
+                    <a href="mailto:hello@aryabhat.ai" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> hello@aryabhat.ai</a>
+                    <!-- <a href="#" class="btn btn-outline"><i class="fa-solid fa-calendar"></i> Schedule Demo</a> -->
+                </div>
+                <br>
+                <!-- <p class="small text-muted">Or visit <strong>demo.aryabhat.ai</strong></p> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="grid-3" style="margin-bottom: 50px; align-items: start;">
+            <div>
+                <div class="logo" style="margin-bottom: 20px;">
+                    <div class="ai-avatar" style="width: 60px; height: 60px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <img src="/logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                </div>
+                </i> ARYABHAT</div>
+                <p class="text-muted small">Named after the legendary mathematician. Our mission is to bring innovation and knowledge-sharing to modern enterprises through Artificial Intelligence.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Quick Links</h4>
+                <ul style="list-style: none; line-height: 2;" class="text-muted small">
+                    <li><a href="#features" style="text-decoration:none; color:inherit; transition:0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">Features</a></li>
+                    <li><a href="#contact" style="text-decoration:none; color:inherit; transition:0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Contact</h4>
+                <ul style="list-style: none; line-height: 2;" class="text-muted small">
+                    <li>hello@aryabhat.ai</li>
+                    <li>Bengluru, KA</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted);">
+            &copy; 2025 Aryabhat AI. All rights reserved. Version 2.0
+        </div>
+    </div>
+</footer>
