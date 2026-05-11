@@ -41,7 +41,7 @@ export default function ThirdPartyScripts() {
     <>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-        strategy="afterInteractive" 
+        strategy="beforeInteractive"
       />
       <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
