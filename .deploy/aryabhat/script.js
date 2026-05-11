@@ -680,33 +680,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', updateArchitectureArrow);
 window.addEventListener('resize', updateArchitectureArrow02);
-
-// ========================================
-// 16. MOBILE HAMBURGER NAV
-// ========================================
-(function() {
-    const hamburger = document.getElementById('nav-hamburger');
-    const navEl = document.querySelector('nav');
-    if (!hamburger || !navEl) return;
-
-    hamburger.addEventListener('click', () => {
-        const isOpen = navEl.classList.toggle('menu-open');
-        hamburger.classList.toggle('open', isOpen);
-    });
-
-    // Close menu when a nav link is clicked
-    document.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
-        link.addEventListener('click', () => {
-            navEl.classList.remove('menu-open');
-            hamburger.classList.remove('open');
-        });
-    });
-
-    // Close menu on outside click
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('nav')) {
-            navEl.classList.remove('menu-open');
-            hamburger.classList.remove('open');
-        }
-    });
-})();
