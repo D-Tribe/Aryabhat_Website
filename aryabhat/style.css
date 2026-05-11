@@ -1032,36 +1032,145 @@ footer a:hover { color: #2563eb; }
     50% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
 }
 
+/* --- HAMBURGER BUTTON --- */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    background: none;
+    margin-left: auto;
+}
+.nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* --- RESPONSIVE --- */
+
+/* Tablet */
 @media (max-width: 992px) {
-    .grid-2 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; gap: 40px; }
     h1 { font-size: 2.6rem; }
     h2 { font-size: 2rem; }
-    .arch-stage { flex-direction: column; }
+    .arch-stage { flex-direction: column; gap: 20px; }
     .arch-arrow { transform: rotate(90deg); }
     .industry-content { grid-template-columns: 1fr; gap: 40px; }
-    .industry-chat { height: auto; min-height: 400px; }
-    .industry-info { min-height: auto; }
-    .industry-info h3 { font-size: 2rem; }
+    .industry-chat { height: auto; min-height: 360px; }
+    .industry-info { min-height: auto; padding-left: 20px; }
+    .industry-info h3 { font-size: 1.8rem; }
+    .section-header { margin-bottom: 50px; }
+    .badge-container { flex-wrap: wrap; justify-content: center; }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+    /* Nav */
     .nav-links, .nav-actions { display: none; }
-    .nav-island { justify-content: center; }
-    section { padding: 4rem 5%; }
+    .nav-links.open, .nav-actions.open { display: flex; }
+    .nav-island { justify-content: space-between; flex-wrap: nowrap; }
+    .nav-hamburger { display: flex; }
+
+    /* Mobile nav open state */
+    nav.menu-open .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(240,244,248,0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 1rem 5%;
+        gap: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        z-index: 199;
+    }
+    nav.menu-open .nav-actions {
+        display: flex;
+        position: fixed;
+        top: calc(56px + 220px); left: 0; right: 0;
+        background: rgba(240,244,248,0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 0.75rem 5%;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        z-index: 199;
+        justify-content: center;
+    }
+    nav.menu-open .nav-links { gap: 0; }
+    nav.menu-open .nav-links a { padding: 0.75rem 0.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); border-radius: 0; }
+
+    /* Layout */
+    section { padding: 3.5rem 4%; }
     h1 { font-size: 2rem; }
     h2 { font-size: 1.6rem; }
-    .hero { padding-top: 120px; }
-    .hero h1 { font-size: 2.4rem; }
+
+    /* Hero */
+    .hero { padding-top: 100px; }
+    .hero h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); }
+    .hero p { font-size: 1rem; }
+    .badge-container { flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 24px; }
+    .hero-badge { font-size: 0.72rem; padding: 6px 12px; }
+
+    /* Grids */
     .grid-3 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+
+    /* Cards */
     .card-wrapper { height: auto !important; }
-    .section-header h2 { font-size: 2rem; }
+    .card-content { padding: 1.5rem; }
+    .section-header h2 { font-size: 1.6rem; }
+    .section-header { margin-bottom: 40px; }
+
+    /* Architecture */
+    .arch-stage { flex-direction: column; gap: 16px; }
+    .arch-arrow { transform: rotate(90deg); font-size: 1.4rem; }
+    .arch-node { padding: 14px; }
+    .arch-node.xxlarge { padding: 24px 14px; }
+    .node-icon { width: 72px; height: 72px; font-size: 22px; }
+    .node-icon.xxlarge { width: 90px; height: 90px; font-size: 36px; }
+    .node-icon-group i { font-size: 36px !important; }
+
+    /* Industry */
+    .industry-block { margin-bottom: 50px; padding: 24px 0; }
+    .industry-content { grid-template-columns: 1fr; gap: 24px; }
+    .industry-info { min-height: auto; padding-left: 16px; }
+    .industry-info h3 { font-size: 1.5rem; gap: 12px; }
+    .industry-info h3 i { font-size: 1.4rem; }
+    .industry-info p { font-size: 1rem; margin-bottom: 1.25rem; }
+    .industry-chat { min-height: 320px; }
+    .msg-bubble { max-width: 88%; font-size: 0.88rem; padding: 10px 14px; }
+
+    /* Stats */
     .stat-box { min-width: auto !important; }
-    .stat-container { flex-direction: column; }
-    .industry-block { margin-bottom: 60px; }
-    .msg-bubble { max-width: 85%; }
-    .review-v-card { min-height: 280px; padding: 30px 20px; }
-    .testimonial-container { max-width: 100%; }
+    .stat-container { flex-direction: column; gap: 16px; }
+
+    /* Steps */
+    .step-row { gap: 24px; }
+    .step-marker { width: 42px; height: 42px; flex-shrink: 0; font-size: 0.9rem; }
+    .step-content { padding: 20px; }
+
+    /* Testimonials */
+    .review-v-card { min-height: 220px; padding: 24px 16px; gap: 20px; }
+    .review-body { font-size: 0.95rem; }
+    .testimonial-container { max-width: 100%; padding: 0 8px; }
+
+    /* FAQ */
+    .faq-question { padding: 18px; font-size: 0.95rem; }
+    .faq-answer { padding: 0 18px; }
+
+    /* Footer */
+    footer { padding: 2.5rem 4% 1.5rem; }
+    footer .grid-3 { grid-template-columns: 1fr; gap: 2rem; }
 
     html, body {
         overflow-x: hidden !important;
@@ -1079,10 +1188,14 @@ footer a:hover { color: #2563eb; }
 
 @media (max-width: 480px) {
     h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.4rem; }
-    .card-content, .card-wrapper .card-content { padding: 1.5rem; }
-    .stat-container { grid-template-columns: 1fr; gap: 20px; display: grid; }
+    h2 { font-size: 1.3rem; }
+    .card-content, .card-wrapper .card-content { padding: 1.25rem; }
+    .stat-container { grid-template-columns: 1fr; gap: 16px; display: grid; }
     .stat-box { display: flex !important; flex-direction: column !important; width: 100% !important; }
+    .hero-badge { font-size: 0.68rem; padding: 5px 10px; }
+    .node-icon-group i { font-size: 28px !important; }
+    .industry-info h3 { font-size: 1.3rem; }
+    .btn { padding: 0.6rem 1.1rem; font-size: 0.88rem; }
 }
 
 @media (min-width: 501px) and (max-width: 768px) {
