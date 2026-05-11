@@ -1,20 +1,26 @@
 1:"$Sreact.fragment"
 2:I[7555,[],""]
 3:I[1295,[],""]
-4:I[5219,["177","static/chunks/app/layout-817c8f54c69bb7f6.js"],"default"]
+4:I[5219,["177","static/chunks/app/layout-8ba49891e2ba51c6.js"],"default"]
 6:I[9665,[],"OutletBoundary"]
 9:I[9665,[],"ViewportBoundary"]
 b:I[9665,[],"MetadataBoundary"]
 d:I[6614,[],""]
-:HL["/_next/static/css/f68fd74b091e3be4.css","style"]
-5:T7e46,<div class="ambient-glow"></div>
+:HL["/_next/static/css/fd13a5d6cf6fda7b.css","style"]
+5:T7db9,<div class="ambient-glow"></div>
+<div class="aurora-bg">
+  <div class="aurora-blob blob-1"></div>
+  <div class="aurora-blob blob-2"></div>
+  <div class="aurora-blob blob-3"></div>
+  <div class="aurora-blob blob-4"></div>
+</div>
 <canvas id="neural-canvas"></canvas>
 
 <nav>
     <div class="nav-island">
         <div class="logo">
-            <div style="width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <img src="/logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+            <div style="width: 60px; height: 60px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <img src="./logo.png" alt="Aryabhat Logo" style="width: 80%; height: 80%; object-fit: contain; filter: invert(0);">
                 </div>
             <i class="fa-solid"></i> 
             <a href="/">ARYABHAT</a>
@@ -52,7 +58,7 @@ d:I[6614,[],""]
 <!-- ARCHITECTURE DIAGRAM SECTION -->
 <section style="padding: 10px 0;">
     <div class="container">
-        <div class="architecture-flow">
+        <div >
             <div class="arch-stage">
                 <div class="arch-column">
                     <!-- PDF Files -->
@@ -164,11 +170,11 @@ d:I[6614,[],""]
             </div>
             <div class="card-wrapper reveal-right" style="border-color: var(--primary-glow);">
                 <div class="card-content">
-                    <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 15px;">Aryabhat Changes Everything</h3>
+                    <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 15px;">Aryabhat Solution</h3>
                     <p style="margin-bottom: 30px; color: var(--text-muted);">
                         We transform how your organization accesses information. By combining RAG (Retrieval-Augmented Generation) with your private data, we enable anyone to be an expert instantly.
                     </p>
-                    <div class="stat-container">
+                    <!-- <div class="stat-container">
                         <div class="stat-box">
                             <h4 style="color: var(--primary);">85%</h4>
                             <span style="font-size: 0.85rem; color: var(--text-muted);">Less Search Time</span>
@@ -181,7 +187,7 @@ d:I[6614,[],""]
                             <h4 style="color: var(--secondary);">95%</h4>
                             <span style="font-size: 0.85rem; color: var(--text-muted);">User Satisfaction</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -599,13 +605,13 @@ d:I[6614,[],""]
             <div>
                 <h4 style="margin-bottom: 20px;">Quick Links</h4>
                 <ul style="list-style: none; line-height: 2;" class="text-muted small">
-                    <li><a href="#features" style="text-decoration:none; color:inherit; transition:0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">Features</a></li>
-                    <li><a href="#contact" style="text-decoration:none; color:inherit; transition:0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">Pricing</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Pricing</a></li>
                 </ul>
             </div>
             <div>
                 <h4 style="margin-bottom: 20px;">Contact</h4>
-                <ul style="list-style: none; line-height: 2;" class="text-muted small">
+                <ul style="list-style: none; line-height: 2;" class="small">
                     <li>hello@aryabhat.ai</li>
                     <li>Bengluru, KA</li>
                 </ul>
@@ -615,7 +621,7 @@ d:I[6614,[],""]
             &copy; 2025 Aryabhat AI. All rights reserved. Version 2.0
         </div>
     </div>
-</footer>0:{"P":null,"b":"oiQBdJdfe9eDwCdfPs4nb","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f68fd74b091e3be4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],["$","title",null,{"children":"Aryabhat | Intelligent Enterprise Knowledge Assistant"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap","rel":"stylesheet"}],["$","link",null,{"rel":"stylesheet","href":"/style.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}]]}],["$","body",null,{"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","VUlWML-jZ-HJQMP1pXcuw",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}
+</footer>0:{"P":null,"b":"aGEj3keUWrMNkZBDKfp1j","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/fd13a5d6cf6fda7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],["$","title",null,{"children":"Aryabhat | Intelligent Enterprise Knowledge Assistant"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;700;800;900&family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}],["$","link",null,{"rel":"stylesheet","href":"/style.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}]]}],["$","body",null,{"suppressHydrationWarning":true,"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","tSlqphhIOR_eZstUbmX1U",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}
 a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 7:null
 8:null
