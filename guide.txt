@@ -1,33 +1,32 @@
 ---
 
+## URL Structure
+
+  aryabhat.ai           → Aryabhat/aryabhat_main.html  (main site)
+  aryabhat.ai/aryabhat  → this Next.js project         (product page)
+  aryabhat.ai/narrate   → Narrate/Narrate/index.html   (narrate page)
+
+---
+
 ## To Update Website - aryabhat.ai
 
-1. Check CNAME file in /out
+1. Make your changes (any of the three sites)
 
-   >> aryabhat.ai
-
-2. Check next.config.ts
-
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-output: "export",
-images: { unoptimized: true },
-basePath: "",
-assetPrefix: "",
-};
-
-export default nextConfig;
-
-3. Git add, commit & deploy
+2. Git add & commit
 
 git add .
 git commit -m "<message>"
 git push origin main
-npm run build
+
+3. Deploy everything in one command
+
 npm run deploy
+
+   This will: build Next.js → assemble all three sites → push to GitHub Pages
+
 ---
 
 ## To Start From Local
 
 npm run dev
+

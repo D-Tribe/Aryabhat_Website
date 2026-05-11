@@ -3,8 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
-  basePath: "",
-  assetPrefix: "",
+  basePath: "/aryabhat",
+  assetPrefix: "/aryabhat/",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "/aryabhat",
+  },
 };
 
 export default nextConfig;

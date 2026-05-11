@@ -63,7 +63,7 @@ export default function ThirdPartyScripts() {
           strategy="beforeInteractive"
         />
 
-        <Script src="/script.js" strategy="afterInteractive" /> 
+        <Script src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/script.js`} strategy="afterInteractive" />
     </>
   );
 }

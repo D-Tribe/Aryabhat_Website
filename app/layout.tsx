@@ -30,7 +30,7 @@ export default function RootLayout({
         />
 
         {/* CSS */}
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/style.css`} />
 
         {/* ICONS */}
         <link
