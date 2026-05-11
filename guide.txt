@@ -25,6 +25,10 @@ npm run deploy
    This will: build Next.js → assemble all three sites → push to GitHub Pages
 
 ---
+Changes - Redeploy
+
+rm -rf .deploy
+---
 
 ## To Start From Local
 
