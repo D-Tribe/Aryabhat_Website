@@ -1,13 +1,13 @@
 1:"$Sreact.fragment"
 2:I[7555,[],""]
 3:I[1295,[],""]
-4:I[5219,["177","static/chunks/app/layout-8ba49891e2ba51c6.js"],"default"]
+4:I[5219,["177","static/chunks/app/layout-9dcdc0360ee1de1d.js"],"default"]
 6:I[9665,[],"OutletBoundary"]
 9:I[9665,[],"ViewportBoundary"]
 b:I[9665,[],"MetadataBoundary"]
 d:I[6614,[],""]
-:HL["/_next/static/css/fd13a5d6cf6fda7b.css","style"]
-5:T7db9,<div class="ambient-glow"></div>
+:HL["/aryabhat/_next/static/css/fd13a5d6cf6fda7b.css","style"]
+5:T7dbb,<div class="ambient-glow"></div>
 <div class="aurora-bg">
   <div class="aurora-blob blob-1"></div>
   <div class="aurora-blob blob-2"></div>
@@ -119,7 +119,7 @@ d:I[6614,[],""]
                     <div class="arch-node xxlarge">
                         <div class="node-icon xxlarge" style="background: rgba(139, 92, 246, 0.1);">
                             <!-- <i class="fa-solid fa-brain"></i> -->
-                                <img src="/logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                                <img src="./logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
                             
                         </div>
                         <div class="node-label">Aryabhat</div>
@@ -597,7 +597,7 @@ d:I[6614,[],""]
             <div>
                 <div class="logo" style="margin-bottom: 20px;">
                     <div class="ai-avatar" style="width: 60px; height: 60px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <img src="/logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
+                    <img src="./logo.png" alt="Aryabhat Logo" style="width: 65%; height: 65%; object-fit: contain; filter: invert(1);">
                 </div>
                 </i> ARYABHAT</div>
                 <p class="text-muted small">Named after the legendary mathematician. Our mission is to bring innovation and knowledge-sharing to modern enterprises through Artificial Intelligence.</p>
@@ -621,8 +621,8 @@ d:I[6614,[],""]
             &copy; 2025 Aryabhat AI. All rights reserved. Version 2.0
         </div>
     </div>
-</footer>0:{"P":null,"b":"aGEj3keUWrMNkZBDKfp1j","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/fd13a5d6cf6fda7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],["$","title",null,{"children":"Aryabhat | Intelligent Enterprise Knowledge Assistant"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;700;800;900&family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}],["$","link",null,{"rel":"stylesheet","href":"/style.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}]]}],["$","body",null,{"suppressHydrationWarning":true,"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","tSlqphhIOR_eZstUbmX1U",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}
+</footer>0:{"P":null,"b":"7tqZdzkC2zzjToUUnJ-An","p":"/aryabhat","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/aryabhat/_next/static/css/fd13a5d6cf6fda7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"UTF-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],["$","title",null,{"children":"Aryabhat | Intelligent Enterprise Knowledge Assistant"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;700;800;900&family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}],["$","link",null,{"rel":"stylesheet","href":"/aryabhat/style.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}]]}],["$","body",null,{"suppressHydrationWarning":true,"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","_MufmaNd_aVCTH8fVqMz-",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}
 a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 7:null
 8:null
-c:[["$","link","0",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+c:[["$","link","0",{"rel":"icon","href":"/aryabhat/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
