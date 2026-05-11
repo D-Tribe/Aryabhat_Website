@@ -791,7 +791,7 @@ footer a:hover { color: #2563eb; }
     box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
     animation: blink 2s infinite;
 }
-.tag-model { display: flex; gap: 8px; }
+.tag-model { display: flex; gap: 8px; margin-left: 15px; }
 .model {
     border: 1px solid rgba(37, 99, 235, 0.25);
     border-radius: 8px;
